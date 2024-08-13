@@ -1,1 +1,118 @@
 
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://cdn.discordapp.com/attachments/1271162298995572736/1272951284026183700/black_blue_gradient.jpg?ex=66bcd7c4&is=66bb8644&hm=e2a777b7e47238c860aa667b0f001262d90722aa78cfe0ad53fa15f5dbaa3a86&');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.link {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.subtext {
+  position: absolute;
+  top: calc(10% + 80px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  width: 80%;
+  max-width: 800px;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.image-container {
+  position: absolute;
+  top: calc(10% + 200px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  max-width: 843px;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 6px solid rgba(128, 128, 128, 0.8);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: perspective(1000px) rotateY(20deg) rotateX(20deg);
+  box-shadow: 0 0 60px rgba(255, 255, 255, 1);
+}
