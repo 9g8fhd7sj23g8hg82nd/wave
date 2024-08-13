@@ -1,94 +1,164 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url('https://cdn.discordapp.com/attachments/1271162298995572736/1272951284026183700/black_blue_gradient.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://cdn.discordapp.com/attachments/1271162298995572736/1272951284026183700/black_blue_gradient.jpg?ex=66bcd7c4&is=66bb8644&hm=e2a777b7e47238c860aa667b0f001262d90722aa78cfe0ad53fa15f5dbaa3a86&');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(100px);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(100px);
+  z-index: -1;
 }
 
 header {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    background: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Space between items */
+  background: none;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Space between items */
 }
 
 .logo {
-    width: 30px;
-    height: auto;
+  width: 30px;
+  /* Logo size */
+  height: auto;
 }
 
 .logo-text {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700;
-    margin-right: 40px;
-    margin-left: 3px;
+  font-size: 20px;
+  /* Font size for the text */
+  color: #fff;
+  font-weight: 700;
+  /* Bold text */
 }
 
 .link {
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    margin-left: 40px;
+  font-size: 20px;
+  /* Same size as the logo text */
+  color: #fff;
+  /* White text color */
+  text-decoration: none;
+  /* Removes the underline from the link */
+  font-weight: 700;
+  /* Bold text */
+  padding: 10px 20px;
+  /* Padding for spacing */
+  background-color: transparent;
+  /* Transparent background */
+  border: none;
+  /* No border */
+  display: inline-block;
+  /* Ensures proper spacing and alignment */
 }
 
 .link:hover {
-    text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Slight background change on hover */
 }
 
-.main-content {
-    text-align: center;
-    color: #fff;
-    margin-top: 100px;
+.hero-text {
+  position: absolute;
+  top: 10%;
+  /* Move text up */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, 0);
+  /* Adjust to center horizontally */
+  font-size: 36px;
+  /* Font size for the main text */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Center text horizontally */
+  font-weight: 700;
+  /* Bold text */
+  z-index: 1;
+  /* Ensure text is above other elements */
 }
 
-.main-text {
-    font-size: 36px;
-    margin-bottom: 20px;
+.subtext {
+  position: absolute;
+  top: calc(10% + 80px);
+  /* Move up with a gap from the main text */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, 0);
+  /* Adjust to center horizontally */
+  font-size: 18px;
+  /* Smaller font size */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Center text horizontally */
+  font-weight: 400;
+  /* Normal text weight */
+  width: 80%;
+  /* Adjust width to fit text */
+  max-width: 800px;
+  /* Optional: Max width for better readability */
+  line-height: 1.5;
+  /* Line height for better readability */
+  z-index: 1;
+  /* Ensure text is above other elements */
 }
 
-.sub-text {
-    font-size: 20px;
-    margin-bottom: 40px;
+.image-container {
+  position: absolute;
+  top: calc(10% + 200px);
+  /* Move image up more */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, 0);
+  /* Adjust to center horizontally */
+  width: 80%;
+  /* Adjust width as needed */
+  max-width: 843px;
+  /* Limit the max width of the image */
+  text-align: center;
+  /* Center image horizontally */
 }
 
-.wave-image {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin: 0 auto;
-    display: block;
-    border: 2px solid rgba(128, 128, 128, 0.5);
-    border-radius: 10px;
+.image-container img {
+  width: 100%;
+  /* Make image responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Ensure no extra space below the image */
+  border: 6px solid rgba(128, 128, 128, 0.8);
+  /* More visible grey outline */
+  border-radius: 15px;
+  /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for effects */
 }
 
-.wave-image:hover {
-    transform: rotate(-3deg);
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+.image-container img:hover {
+  transform: perspective(1000px) rotateY(20deg) rotateX(20deg);
+  /* More pronounced 3D tilt effect */
+  box-shadow: 0 0 60px rgba(255, 255, 255, 1);
+  /* More pronounced white glowing outline */
 }
